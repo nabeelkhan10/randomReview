@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(219, 235, 225);
+}
+
+.container{
+    /* height: 60vh; */
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.underline{
+    margin-bottom: 10px;
+    text-decoration: overline;
+    width:35%;
+    height: 2px;
+    background-color: rgb(218, 102, 102);
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 50vh;
+    width: 100vh;
+    background-color: rgb(241, 241, 241);
+    border-radius: 2px;
+    box-shadow: 10px 10px 30px -11px rgba(112, 112, 112, 0.75);
+}
+
+
+.img-container{
+    margin-top: 10px;
+}
+
+#img{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#author,#job,#info{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#job{
+    color: red;
+}
+
+.button-container{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.prev-btn,.next-btn{
+    cursor: pointer;
+}
