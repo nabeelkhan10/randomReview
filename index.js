@@ -38,26 +38,31 @@ let prevbtn = document.querySelector('.prev-btn');
 let nextbtn = document.querySelector('.next-btn');
 let citem= 0;
 // let random = Math.floor(Math.random()*3);
-window.addEventListener('DOMContentLoaded', changeview);
+window.addEventListener('DOMContentLoaded', changeview(0));
 
 prevbtn.addEventListener('click', ()=>{
     if(citem == 0){
         citem=4;
     }
     citem--;
-    changeview();
+    changeview(citem);
 });
 nextbtn.addEventListener('click', ()=>{
     if(citem == 3){
         citem=-1;
     }
     citem++;
-    changeview();
+    changeview(citem);
 });
 
-function changeview(){
-    let item = reviews[citem];
+function changeview(number){
+    let item = reviews[number];
     job.innerHTML = item.job;
     info.innerHTML = item.info;
     author.innerHTML = item.author;
+    // console.log('asd');
 }
+
+setInterval(()=>{
+    changeview(Math.floor(Math.random()*3));
+}, 3000);
